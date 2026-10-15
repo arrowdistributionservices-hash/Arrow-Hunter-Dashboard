@@ -1,25 +1,25 @@
-# Flipmine Global Dashboard (Live)
+# Arrow Hunter Dashboard (Live)
 
 - **Sourcing** — fetched live from Google Sheets on every page load. No upload needed.
 - **Sales** — uploaded via `/admin` (password-protected). Persists in a shared Redis database (Upstash, via Vercel Marketplace) so everyone sees the same latest data.
 
 ## 1. Google Sheet — enable public read access
 
-Open the Flipmine Deals sheet → **Share** → **General access** → **"Anyone with the link"** → **Viewer**.
+Open the Deals sheet → **Share** → **General access** → **"Anyone with the link"** → **Viewer**.
 
 This is required for the live fetch to work. It means anyone with the sheet URL can view the raw sourcing data (not edit it) — worth confirming that's acceptable before deploying.
 
 ## 2. Push this project to GitHub
 
 ```
-cd flipmine-dashboard
+cd arrow-hunter-dashboard
 git init
 git add .
 git commit -m "Initial commit"
 ```
 Create a new repo on github.com (public or private, either works with Vercel), then:
 ```
-git remote add origin https://github.com/YOUR_USERNAME/flipmine-dashboard.git
+git remote add origin https://github.com/YOUR_USERNAME/arrow-hunter-dashboard.git
 git branch -M main
 git push -u origin main
 ```
@@ -27,7 +27,7 @@ git push -u origin main
 ## 3. Deploy on Vercel
 
 1. Go to vercel.com, sign in (GitHub login is easiest)
-2. **Add New → Project → Import** the `flipmine-dashboard` repo
+2. **Add New → Project → Import** the `arrow-hunter-dashboard` repo
 3. Leave build settings as default (Next.js is auto-detected) → **Deploy**
 4. First deploy may fail if a dependency has an issue — see "If the build fails" below
 

@@ -132,9 +132,9 @@ export default function Home() {
   if (error) {
     return (
       <div className="wrap" style={{ maxWidth: 640 }}>
-        <h1>Flipmine</h1>
+        <h1>Arrow Hunter</h1>
         <p className="section-note" style={{ marginTop: 16 }}>Couldn&apos;t load live data: {error}</p>
-        <p className="subtitle">The Flipmine Deals sheet must be shared as &quot;Anyone with the link can view&quot; for the dashboard to read it.</p>
+        <p className="subtitle">The Deals sheet must be shared as &quot;Anyone with the link can view&quot; for the dashboard to read it.</p>
       </div>
     );
   }
@@ -173,10 +173,10 @@ function GlobalNav({ lastEntry, active }) {
   return (
     <header className="gnav">
       <div className="gnav-inner">
-        <a href="#overview" className="gnav-brand" aria-label="Arrow Distribution, Flipmine dashboard home">
+        <a href="#overview" className="gnav-brand" aria-label="Arrow Distribution, Arrow Hunter dashboard home">
           <img src="/arrow-logo.png" alt="Arrow Distribution" className="gnav-logo" />
           <span className="gnav-divider" aria-hidden="true" />
-          <span>Flipmine</span>
+          <span>Arrow Hunter</span>
         </a>
         <nav className="gnav-links">
           {TABS.map(([id, label]) => (
@@ -268,7 +268,7 @@ function Overview({ sourcing, days, weekly, bySource, salesAccounts, mode, setMo
       )}
 
       <footer>
-        Purchasing figures come from the Purchasing Log tab. Deal, brand and client figures come from rows marked Bought across the Flipmine Deals sheet. Data loaded {new Date(generatedAt).toLocaleString('en-US', { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' })}.
+        Purchasing figures come from the Purchasing Log tab. Deal, brand and client figures come from rows marked Bought across the Deals sheet. Data loaded {new Date(generatedAt).toLocaleString('en-US', { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' })}.
       </footer>
     </>
   );
